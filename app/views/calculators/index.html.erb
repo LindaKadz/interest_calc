@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>History</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Years</th>
+      <th>Principal</th>
+      <th>Rate</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculator.each do |calculator| %>
+      <tr>
+        <td><%= calculator.year %></td>
+        <td><%= calculator.principle %></td>
+        <td><%= calculator.rate %></td>
+        <td><%= calculator.total %></td>
+        <td><%= link_to 'Show', calculator %></td>
+        <td><%= link_to 'Destroy', calculator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Calculate', root_path %>
+<%= link_to 'Delete All', calculators_path, method: :delete, data: {confirm: 'Are you sure you want to delete all records?'} %>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'History', calculators_path %>
+
+<%= form_with scope: :calculator, url: calculators_path, local: true do |f| %>
+  <p>
+  <%= f.label :principle %>
+  <%= f.text_field :principle %>
+  </p>
+  <p>
+  <%= f.label :rate %>
+  <%= f.text_field :rate %>
+  </p>
+  <p>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+  </p>
+  <p><%= f.submit 'Calculate' %></p>
+<% end %>
