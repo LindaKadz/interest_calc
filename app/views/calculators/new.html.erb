@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
+
+<% if @calculator.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@calculator.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @calculator.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <%= link_to 'History', calculators_path %>
 
 <%= form_with scope: :calculator, url: calculators_path, local: true do |f| %>
