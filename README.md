@@ -1,24 +1,7 @@
-# README
+# Calculator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To set up;
 
-Things you may want to cover:
+Run `rails db:setup` to set up and migrate the db.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+run `rails s` to start the server then visit your browser, use the link `localhost:3000` to view the project
