@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2019_11_12_235548) do
 
   create_table "calculators", force: :cascade do |t|
     t.integer "principle"
-    t.decimal "rate"
+    t.float "rate"
     t.integer "year"
-    t.decimal "total"
+    t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
